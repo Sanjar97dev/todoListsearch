@@ -10,6 +10,7 @@ export default class TodoAdd extends Component {
       } else {
         this.props.onAddtodo(trimText);
       }
+      this.props.onInputChange({ target: { value: '' } });
     }
   };
 
