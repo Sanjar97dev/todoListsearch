@@ -1,34 +1,32 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 export default class TodoAdd extends Component {
-    state={
-        text:''
+  handleAddTodo = () => {
+    const trimText = this.props.editedText.trim();
+
+    if (trimText) {
+      if (this.props.editingTodoId) {
+        this.props.onSaveEdit(this.props.editingTodoId);
+      } else {
+        this.props.onAddtodo(trimText);
+      }
     }
-    setText=(e)=>{
-        this.setState({text:e.target.value.trim()})
-    } 
+  };
 
-    handleAddTodo = () => {
-        const trimText=this.state.text;
-
-        if (trimText) {
-            this.props.onAddtodo(trimText)
-            this.setState({text: ''})
-        }
-    }  
-
-    
   render() {
-
     return (
-        <div className="d-flex">
-        <input type="text" placeholder='add todo' 
-        className="form-control"
-        value={this.state.text}
-        onChange={this.setText}
+      <div className="d-flex">
+        <input
+          type="text"
+          placeholder="add todo"
+          className="form-control"
+          value={this.props.editedText}
+          onChange={this.props.onInputChange}
         />
-        <button className="btn btn-info" onClick={this.handleAddTodo}>Add</button>
-    </div>
-    )
+        <button className="btn btn-info" onClick={this.handleAddTodo}>
+          {this.props.editingTodoId ? 'Save' : 'Add'}
+        </button>
+      </div>
+    );
   }
 }

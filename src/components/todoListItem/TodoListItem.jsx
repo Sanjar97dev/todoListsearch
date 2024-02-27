@@ -10,30 +10,24 @@ export default class TodoListItem extends Component {
 
     let doneclass=''
     if(this.props.done){
-      doneclass+=' done'
+      doneclass+='done'
     };
     return (
       <>
        <span className="d-flex justify-content-between">
-          {this.props.editing ? (
-            <input
-              type="text"
-              value={this.props.editedText}
-              onChange={this.props.onInputChange}
-            />
-          ) : (
+          
             <span
               className={`flex-grow-1 ${clazz} ${doneclass}`}
               onClick={() => this.props.onDoneTodo(this.props.id)}
             >
               {this.props.title}
             </span>
-          )}
+        
           <button
             className="btn btn-primary"
             onClick={() => this.props.editing ? this.props.onSaveEdit(this.props.id) : this.props.onEditTodo(this.props.id)}
           >
-            {this.props.editing ? 'Save' : <i className="bi bi-pencil"></i>}
+             <i className="bi bi-pencil"></i>
           </button>
           <button
             className="btn btn-outline-danger"
