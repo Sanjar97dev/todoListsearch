@@ -26,11 +26,11 @@ export default class App extends Component {
 
   filter = (array, status) => {
     switch (status) {
-      case 'all':
+      case 'баары':
         return array
-      case 'active':
+      case 'активдүү':
         return array.filter(el => !el.done)
-      case 'done':
+      case 'аткарылды':
         return array.filter(el => el.done)
       default:
         return array
