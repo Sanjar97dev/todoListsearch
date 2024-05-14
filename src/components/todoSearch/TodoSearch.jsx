@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 
 export default class TodoSearch extends Component {
   btns=[
-    {name: 'all', title: 'All'},
-    {name: 'active', title: 'Active'},
-    {name: 'done', title: 'Done'},
+    {name: 'баары', title: 'Баары'},
+    {name: 'активдүү', title: 'Активдүү'},
+    {name: 'аткарылды', title: 'Аткарылды'},
   ]
   render() {
 
@@ -20,7 +20,7 @@ export default class TodoSearch extends Component {
 
     return (
         <div className='d-flex'>
-        <input type="text" placeholder='search todo' className='form-control'  value={this.props.searchTodo} 
+        <input type="text" placeholder='тапшырма издөө' className='form-control'  value={this.props.searchTodo} 
         onChange={this.props.searchInput}/>
         {/* <button className='btn btn-info' onClick={this.props.handleAddTodo}>All</button>
         <button className='btn btn-outline-secondary'>Active</button>
