@@ -6,8 +6,8 @@ export default class TodoHeader extends Component {
     const don=this.props.done
     return (
         <div className='d-flex justify-content-between'>
-        <h3>Todo List</h3>
-        <h4>{dom} more todo {don} done</h4>
+        <h3>Тапшырма Баракчасы</h3>
+        <h4>{dom} көбүрөөк иш {don} аткарылды</h4>
         </div>
     )
   }
