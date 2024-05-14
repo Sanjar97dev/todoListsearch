@@ -9,9 +9,9 @@ import '../src/App.css'
 export default class App extends Component {
   state = {
     todoData: [
-      { id: 1, title: 'Learn React', important: false, done: false },
-      { id: 2, title: 'Learn JS', important: false, done: false },
-      { id: 3, title: 'Learn Redux', important: false, done: false },
+      { id: 1, title: 'React үйрөнүү', important: false, done: false },
+      { id: 2, title: 'JS үйрөнүү', important: false, done: false },
+      { id: 3, title: 'Redux үйрөнүү', important: false, done: false },
     ],
     filter: 'all', //active, done
     searchTodo: '',
