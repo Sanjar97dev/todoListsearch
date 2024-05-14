@@ -13,7 +13,7 @@ export default class App extends Component {
       { id: 2, title: 'JS үйрөнүү', important: false, done: false },
       { id: 3, title: 'Redux үйрөнүү', important: false, done: false },
     ],
-    filter: 'all', //active, done
+    filter: 'баары', //active, done
     searchTodo: '',
     editedText: '',
     editingTodoId: null
