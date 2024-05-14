@@ -25,7 +25,7 @@ export default class TodoAdd extends Component {
           onChange={this.props.onInputChange}
         />
         <button className="btn btn-info" onClick={this.handleAddTodo}>
-          {this.props.editingTodoId ? 'Save' : 'Add'}
+          {this.props.editingTodoId ? 'Сактоо' : 'Кошуу'}
         </button>
       </div>
     );
