@@ -127,6 +127,8 @@ export default class App extends Component {
            onInputChange={this.todoInputChange}
            editedText={this.state.editedText}
         />
+
+        <h1>Тузгөн Санжар Таалайбекович</h1>
       </div>
     )
   }
