@@ -19,7 +19,7 @@ export default class TodoAdd extends Component {
       <div className="d-flex">
         <input
           type="text"
-          placeholder="add todo"
+          placeholder="тапшырма кошуу"
           className="form-control"
           value={this.props.editedText}
           onChange={this.props.onInputChange}
